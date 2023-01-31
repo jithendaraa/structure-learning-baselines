@@ -17,8 +17,8 @@ Run ` cd BCD-Nets && bash setup.sh`
 - <b>Note</b>: As a baseline method, learning noise variance is switched off by default and the error variance is set to 0.1 (see the variable log_noise_sigma which saves the log std deviation in line 247). Learning noise variance from data can be switched on by including `--learn_noise True`, if needed.
 
 ### Launching job arrays for BCD Nets
-1. If you want to launch SLURM jobs, first set the list of seeds for which you want to launch a job array
+1. If you want to launch SLURM jobs, first set the list of seeds for which you want to launch a job array.
 For eg., setting `seeds=(0 2 3 5 7 8)` will run the jobs only for those seeds. You will have to set this <b>both</b> in `runner.sh` <b>and</b> in `bcd_job.sh` before running your jobs. Otherwise you will face unexpected behaviour as to which seeds are run. 
 
-2. Launch job array with `bash runner.sh <num_nodes> <num_steps> <artifact_folder_name>`. Example `bash runner.sh 20 10000 sbm1-lingauss-d020:v1`
+2. Launch job array with `bash runner.sh <num_nodes> <num_steps> <artifact_folder_name> <time_for_job>`. Example: `bash runner.sh 20 10000 sbm1-lingauss-d020:v1 6:00:00` will run 10000 steps on the artifact and request nodes for 6h jobs.
 
