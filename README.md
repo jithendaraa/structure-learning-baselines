@@ -3,6 +3,7 @@
 ## 1. BCD Nets
 ### Setting up the environment for BCD Nets 
 Run ` cd BCD-Nets && bash setup.sh`
+In the BCD-Nets folder, also run `mkdir slurm_runs`. This is where the slurm .out files will be outputted.
 
 ### Running BCD Nets
 
