@@ -13,7 +13,7 @@ seeds=(0 15 18 19 20 21 22 23 24)
 seed=${seeds[ $((  (${SLURM_ARRAY_TASK_ID})  % ${#seeds[@]} )) ]}
 
 module load anaconda/3
-conda activate mybcd2
+conda activate mybcd
 
 start=`date +%s`
 echo "Begin run"
